@@ -6,6 +6,7 @@ require("nitesh.colorscheme")
 require("nitesh.keymaps")
 require("nitesh.cmp")
 require("nitesh.lsp")
+require("nitesh.devicons")
 require("nitesh.lualine")
 require("nitesh.nvimtree")
 require("nitesh.telescope")
@@ -15,12 +16,6 @@ require("nitesh.alpha")
 require("nitesh.null-ls")
 require("nitesh.gitsigns")
 require("nitesh.terminal")
-
-
-
-
-
-
-
+require("nitesh.bufferline")
 
 

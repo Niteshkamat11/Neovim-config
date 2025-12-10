@@ -1,39 +1,36 @@
-local lspconfig = require("lspconfig")
-local capabilities = require("nitesh.cmp") -- your custom cmp capabilities
+-- ~/.config/nvim/lua/nitesh/lsp.lua
+local capabilities = require("nitesh.cmp")
 
--- Python
-lspconfig.pyright.setup {
+-- Define configs
+vim.lsp.config("pyright", {
   capabilities = capabilities,
-}
+})
 
--- TypeScript / JavaScript
-lspconfig.tsserver.setup {   -- not ts_ls
+vim.lsp.config("ts_ls", {
   capabilities = capabilities,
-}
+})
 
--- C / C++
-lspconfig.clangd.setup {
+vim.lsp.config("clangd", {
   capabilities = capabilities,
-}
+})
 
--- HTML
-lspconfig.html.setup {
+vim.lsp.config("html", {
   capabilities = capabilities,
-}
+})
 
--- CSS
-lspconfig.cssls.setup {
+vim.lsp.config("cssls", {
   capabilities = capabilities,
-}
+})
 
--- JSON
-lspconfig.jsonls.setup {
+vim.lsp.config("jsonls", {
   capabilities = capabilities,
-}
+})
 
--- Emmet (optional but very useful)
-lspconfig.emmet_ls.setup {
+vim.lsp.config("emmet_ls", {
   capabilities = capabilities,
   filetypes = { "html", "css", "javascriptreact", "typescriptreact" },
-}
+})
+
+-- Enable them (they will attach on matching filetypes)
+vim.lsp.enable({ "pyright", "ts_ls", "clangd", "html", "cssls", "jsonls", "emmet_ls" })
 

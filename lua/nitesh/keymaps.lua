@@ -131,3 +131,11 @@ vim.api.nvim_set_keymap('v', '<BS>', '"_d', { noremap = true, silent = true })
 
 vim.keymap.set("i", "<C-z>", "<C-o>u", { noremap = true, silent = true })         -- Undo
 vim.keymap.set("i", "<C-y>", "<C-o><C-r>", { noremap = true, silent = true })    -- Redo alternative
+
+-- Next/Previous buffer
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", { silent = true })
+vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { silent = true })
+
+-- Close buffer
+vim.keymap.set("n", "<leader>x", ":bd<CR>", { silent = true })
+

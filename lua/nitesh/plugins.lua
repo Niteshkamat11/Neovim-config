@@ -1,8 +1,8 @@
 vim.g.VM_maps = {
-  ["Add Cursor Down"] = "<M-Down>",
-  ["Add Cursor Up"] = "<M-Up>",
-  ["Select Cursor Word"] = "<C-d>",   -- keep your original for multi-select
-  ["Add Cursor at End of Line"] = "<M-I>",
+    ["Add Cursor Down"] = "<M-Down>",
+    ["Add Cursor Up"] = "<M-Up>",
+    ["Select Cursor Word"] = "<C-d>",   -- keep your original for multi-select
+    ["Add Cursor at End of Line"] = "<M-I>",
 }
 vim.g.VM_set_statusline = 0
 vim.g.VM_show_warnings = 0
@@ -19,7 +19,6 @@ require "paq" {
     "tpope/vim-repeat";  --makes your edit repeatable using (.)
     "justinmk/vim-sneak"; -- jumps anywhere on the screen with just two characters
     "nvim-tree/nvim-tree.lua";         -- file explorer
-    "nvim-tree/nvim-web-devicons";     -- optional icons (for better look)
     "nvim-telescope/telescope.nvim";  -- fuzzy finder finds the files
     "neovim/nvim-lspconfig";     -- Core LSP support
     "nvim-lualine/lualine.nvim";  -- statusline plugin
@@ -30,19 +29,20 @@ require "paq" {
     "norcalli/nvim-colorizer.lua";
 
     "nvimtools/none-ls.nvim"; -- formatter /linter
-    "akinsho/nvim-toggleterm.lua"; -- terminal
+    "akinsho/nvim-toggleterm.lua";-- terminal
+    "akinsho/bufferline.nvim";  
 
 
-{
-    "nvim-treesitter/nvim-treesitter",
-    run = function() vim.cmd("TSUpdate") end,
-    config = function()
-        require('nvim-treesitter.configs').setup {
-            ensure_installed = { "javascript", "html", "css", "lua", "json" },
-            highlight = { enable = true },
-        }
-    end
-};
+    {
+        "nvim-treesitter/nvim-treesitter",
+        run = function() vim.cmd("TSUpdate") end,
+        config = function()
+            require('nvim-treesitter.configs').setup {
+                ensure_installed = { "javascript", "html", "css", "lua", "json" },
+                highlight = { enable = true },
+            }
+        end
+    };
 
     --Auto completion
     -- completion engine
@@ -82,9 +82,7 @@ require "paq" {
     };
 
 
-
-
-}
+ }
 require("nvim-surround").setup()
 require("nvim-autopairs").setup{}
      
