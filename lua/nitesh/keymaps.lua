@@ -139,3 +139,5 @@ vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { silent = true })
 -- Close buffer
 vim.keymap.set("n", "<leader>x", ":bd<CR>", { silent = true })
 
+-- Colorscheme picker
+vim.keymap.set('n', '<leader>cs', ':Telescope colorscheme<CR>', { desc = 'Select colorscheme' })

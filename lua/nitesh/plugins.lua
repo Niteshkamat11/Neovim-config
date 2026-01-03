@@ -13,6 +13,8 @@ require "paq" {
 
     -- Add your plugins here, for example:
     "folke/tokyonight.nvim";  -- Colorscheme
+    "morhetz/gruvbox"; --Colorscheme
+    "rebelot/kanagawa.nvim"; --Colorscheme
     "kylechui/nvim-surround";  -- Surround text objects
     "nvim-lua/plenary.nvim";   -- Lua functions (used by many plugins)
     "tpope/vim-commentary"; -- visual select the line and press gc or in normal mode press gcc to uncomment/comment
