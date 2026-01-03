@@ -1,5 +1,5 @@
 local wk = require("which-key")
-wk.register({
+wk.add({
   { "<leader>c",  group = "Code/Colorscheme" },
   { "<leader>cs", desc = "Select colorscheme" },
   { "<leader>G",  group = "Git" },
