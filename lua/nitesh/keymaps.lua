@@ -5,7 +5,6 @@ vim.keymap.set("n","<C-s>",":w<CR>",{ noremap = true, silent = true}) -- save wh
 
 vim.keymap.set("n","<C-q>",":wq<CR>",{noremap = true, silent = true}) -- save and exit 
 
-vim.keymap.set("n", "<leader>q", ":bd<CR>", { noremap = true, silent = true }) -- close the current buffer
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true }) -- escape the insert mode
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", { noremap = true, silent = true }) -- remove yellow highlighted color when you search something
 
