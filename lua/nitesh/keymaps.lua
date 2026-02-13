@@ -65,7 +65,7 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true })
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { noremap = true })
 
 -- Duplicate line or selection down
 local function duplicate_down()
