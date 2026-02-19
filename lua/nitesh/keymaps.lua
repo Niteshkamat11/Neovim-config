@@ -23,8 +23,21 @@ end, { noremap = true, silent = true , nowait =true})
 --plugins
 
 vim.keymap.set("n","<leader>e",":NvimTreeToggle<CR>",{ noremap = true, silent = true })
-vim.keymap.set("n", "<leader>f", ":Telescope find_files<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>g", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+
+local function toggle_telescope(picker)
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    local ft = vim.api.nvim_buf_get_option(buf, "filetype")
+    if ft == "TelescopePrompt" then
+      vim.api.nvim_win_close(win, true)
+      return
+    end
+  end
+  require("telescope.builtin")[picker]()
+end
+
+vim.keymap.set("n", "<leader>f", function() toggle_telescope("find_files") end, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>g", function() toggle_telescope("live_grep") end, { noremap = true, silent = true })
 
 --lsp
 
@@ -65,7 +78,7 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
-vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { noremap = true })
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true })
 
 -- Duplicate line or selection down
 local function duplicate_down()
