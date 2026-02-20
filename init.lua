@@ -1,5 +1,6 @@
 vim.o.termguicolors = true
 require("nitesh.plugins")
+require("nvim-autopairs").setup({ check_ts = true }) -- add here
 require("nitesh.colors")
 require("nitesh.options")
 require("nitesh.colorscheme")
