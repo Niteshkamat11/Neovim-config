@@ -1,4 +1,7 @@
 vim.o.termguicolors = true
+-- add these at the bottom of init.lua
+require("nitesh.dap")
+require("trouble").setup()
 require("nitesh.plugins")
 require("nvim-autopairs").setup({ check_ts = true }) -- add here
 require("nitesh.colors")
@@ -12,6 +15,7 @@ require("nitesh.lualine")
 require("nitesh.nvimtree")
 require("nitesh.telescope")
 --require("nitesh.treesitter")
+require("nitesh.indent")
 require("nitesh.which-key")
 require("nitesh.alpha")
 require("nitesh.null-ls")

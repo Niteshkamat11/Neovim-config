@@ -1,3 +1,4 @@
+vim.o.background = "dark"
 -- Load saved colorscheme or use default
 local settings_file = vim.fn.stdpath("config") .. "/lua/nitesh/settings/colorscheme.txt"
 

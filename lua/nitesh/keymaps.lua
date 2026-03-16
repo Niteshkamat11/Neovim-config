@@ -102,5 +102,16 @@ end, { silent = true, desc = "Move line up" })
 vim.keymap.set("n", "<M-Down>", "<Cmd>VMAddCursorDown<CR>", { noremap = true, silent = true, desc = "Add cursor down" })
 vim.keymap.set("n", "<M-Up>", "<Cmd>VMAddCursorUp<CR>", { noremap = true, silent = true, desc = "Add cursor up" })
 
-vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = "Move right in insert mode" })
-vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true, desc = "Move left in insert mode" })
+vim.keymap.set("i", "<A-l>", "<Right>", { noremap = true, silent = true, desc = "Move right in insert mode" })
+vim.keymap.set("i", "<A-h>", "<Left>", { noremap = true, silent = true, desc = "Move left in insert mode" })
+
+-- Trouble
+vim.keymap.set("n", "<leader>d", ":Trouble diagnostics toggle<CR>", { silent = true, desc = "Toggle trouble panel" })
+
+-- Debugger
+local dap = require("dap")
+vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<F5>",  dap.continue,   { desc = "Debug continue" })
+vim.keymap.set("n", "<F10>", dap.step_over,  { desc = "Step over" })
+vim.keymap.set("n", "<F11>", dap.step_into,  { desc = "Step into" })
+vim.keymap.set("n", "<F12>", dap.step_out,   { desc = "Step out" })
