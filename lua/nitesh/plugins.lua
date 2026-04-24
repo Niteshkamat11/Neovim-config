@@ -14,6 +14,9 @@ require "paq" {
     "folke/tokyonight.nvim";
     "morhetz/gruvbox";
     "rebelot/kanagawa.nvim";
+    "sainnhe/gruvbox-material",
+    "luisiacc/gruvbox-baby",
+
     -- indent guides
     "lukas-reineke/indent-blankline.nvim";
     -- error/warning panel
@@ -30,17 +33,21 @@ require "paq" {
     "kylechui/nvim-surround";
     "tpope/vim-commentary";
     "tpope/vim-repeat";
-    "justinmk/vim-sneak";
+    "folke/flash.nvim";
     { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup{} end };
     { "mg979/vim-visual-multi", branch = "master" };
     -- File explorer & finder
     "nvim-tree/nvim-tree.lua";
     "nvim-telescope/telescope.nvim";
+    {"nvim-telescope/telescope-fzf-native.nvim", build = "make"};
+
+    { "ThePrimeagen/harpoon", branch = "harpoon2" }; 
     -- Icons
     "nvim-tree/nvim-web-devicons";
     -- LSP
     "neovim/nvim-lspconfig";
     "nvimtools/none-ls.nvim";
+    "j-hui/fidget.nvim";
     -- Completion
     "hrsh7th/nvim-cmp";
     "hrsh7th/cmp-nvim-lsp";

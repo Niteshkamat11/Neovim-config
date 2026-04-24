@@ -1,15 +1,10 @@
 local null_ls = require("null-ls")
-
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
   sources = {
-    -- Formatters
     null_ls.builtins.formatting.black,
-    -- Linters (Ruff instead of flake8)
-    null_ls.builtins.diagnostics.ruff,
   },
-
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -23,4 +18,3 @@ null_ls.setup({
     end
   end,
 })
-
