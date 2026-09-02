@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require("nvim-treesitter").setup {
   ensure_installed = { "python", "javascript", "typescript", "c", "lua" },
   highlight = { enable = true },
   indent = { enable = true },
@@ -11,5 +11,4 @@ require'nvim-treesitter.configs'.setup {
       node_decremental = "gm",
     },
   },
-
 }

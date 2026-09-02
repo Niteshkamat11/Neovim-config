@@ -34,7 +34,7 @@ require "paq" {
     "tpope/vim-commentary";
     "tpope/vim-repeat";
     "folke/flash.nvim";
-    { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup{} end };
+    "windwp/nvim-autopairs";
     { "mg979/vim-visual-multi", branch = "master" };
     -- File explorer & finder
     "nvim-tree/nvim-tree.lua";

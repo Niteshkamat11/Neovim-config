@@ -16,8 +16,7 @@ vim.opt.smartindent = true
 vim.opt.updatetime  = 100
 vim.opt.timeoutlen  = 300
 vim.opt.ttimeoutlen = 10
-vim.opt.lazyredraw  = false
-vim.opt.ttyfast     = true
+
 
 --  Search
 vim.opt.ignorecase = true           -- case-insensitive search...
