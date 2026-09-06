@@ -18,7 +18,7 @@ local float_term = Terminal:new({
 
 vim.keymap.set("n", "<leader>t", function()
     float_term:toggle()
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true,desc = "Toggle float terminal" })
 
 -- Dynamic right-side vertical-like terminal
 local vertical_term = Terminal:new({
@@ -52,9 +52,9 @@ vim.keymap.set("n", "<leader>v", function()
     vertical_term.float_opts.row = 0
     
     vertical_term:toggle()
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true , desc = "Toggle vertical terminal"})
 
 -- Also map <leader>v in terminal mode to close the terminal
 vim.keymap.set("t", "<leader>v", function()
     vertical_term:toggle()
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true , desc = "Close vertical terminal when in terminal"})

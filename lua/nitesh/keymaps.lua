@@ -145,10 +145,23 @@ vim.keymap.set({ "n", "v" }, "S", function() require("flash").treesitter() end, 
 local harpoon = require("harpoon")
 vim.keymap.set("n", "<C-a>", function() harpoon:list():add() end, { desc = "Harpoon add file" })
 vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon menu" })
-vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
-vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
-vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
-vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
-vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end)
+vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end,{desc = "Harpoon select 1"})
+vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end,{desc = "Harpoon select 2"})
+vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end,{desc = "Harpoon select 3"})
+vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end,{desc = "Harpoon select 4"})
+vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end,{desc = "Harpoon select 5"})
+
+vim.keymap.set({ "n", "i" }, "<F5>", function()
+  require("telescope.builtin").keymaps(require("telescope.themes").get_dropdown({
+    prompt_title = "Keymaps",
+    previewer = false,
+    winblend = 10,
+    border = true,
+    layout_config = {
+        width = 0.9,
+        height = 0.6,
+    },
+  }))
+end, { desc = "Search all keymaps" })
 -- ─── Trouble & DAP (lazy-loaded in init.lua) ──────────────────────────────────
 -- These are defined in init.lua since they bootstrap the plugin on first use
